@@ -16,7 +16,7 @@ def main():
         for line in fileobj:
            if ":" in line:
                 f = open(f"{file}obfusc.bat", "a")
-                f.write(line)
+                f.write(line.rstrip()+'\n')
                 f.close()
                 pass            
            for ch in line:
