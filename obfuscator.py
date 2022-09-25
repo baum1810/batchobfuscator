@@ -14,6 +14,11 @@ def main():
         f.write("::obfuscated by https://github.com/baum1810\n")
         f.close()
         for line in fileobj:
+           if ":" in line:
+                f = open(f"{file}obfusc.bat", "a")
+                f.write(line)
+                f.close()
+                pass            
            for ch in line:
                 if not counter == 1:
                     if "\n" in ch:
